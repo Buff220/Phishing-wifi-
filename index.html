@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Divine Login</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+  /* Reset */
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #eee;
+  }
+
+  .login-container {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+    width: 380px;
+    padding: 40px 30px;
+    text-align: center;
+  }
+
+  .login-container h1 {
+    font-weight: 600;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+    text-shadow: 0 0 15px #61dafb;
+  }
+
+  .login-container p {
+    margin: 0 0 30px;
+    color: #a0c9ff;
+    font-weight: 300;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+    color: #a0c9ff;
+  }
+
+  input {
+    padding: 12px 18px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    border: none;
+    background: rgba(255, 255, 255, 0.15);
+    color: #e0f7ff;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.15);
+  }
+
+  input::placeholder {
+    color: #c0dfff;
+  }
+
+  input:focus {
+    outline: none;
+    background: rgba(97, 218, 251, 0.3);
+    box-shadow: 0 0 20px #61dafb;
+    color: #fff;
+  }
+
+  button {
+    padding: 14px 0;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #00dbde, #fc00ff);
+    color: white;
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+    box-shadow: 0 0 25px #fc00ff, 0 0 40px #00dbde;
+    transition: box-shadow 0.3s ease;
+  }
+
+  button:hover {
+    box-shadow: 0 0 35px #fc00ff, 0 0 60px #00dbde;
+  }
+
+  /* Mobile */
+  @media (max-width: 420px) {
+    .login-container {
+      width: 90%;
+      padding: 30px 20px;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <div class="login-container" role="main" aria-label="Login form">
+    <h1>Ascend Login</h1>
+    <p>Enter your Email &amp; Phone Number</p>
+    <form action="/login">
+      <label for="email">Email Address</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="your.email@example.com"
+        required
+        autocomplete="email"
+      />
+
+      <label for="phone">Phone Number</label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="+787 70 999 13 12"
+        pattern="^\+?[0-9\s\-]{7,15}$"
+        required
+        autocomplete="tel"
+      />
+
+      <button type="submit">Enter the Realm</button>
+    </form>
+  </div>
+
+</body>
+</html>
